@@ -1,5 +1,9 @@
 body {
     font-family: fantasy;
+    position: relative; 
+    margin: 0; /* Elimina el margen por defecto */
+    padding: 0; /* Elimina el padding por defecto */
+    height: 100vh; /* Asegura que el body ocupe toda la altura de la ventana */
 }
 
 body::before {
@@ -9,11 +13,11 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(fondo.jpg);
-    background-size: cover;
-    background-position: center;
+    background-image: url('fondo.jpg');
+    background-size: cover; /* Ajusta la imagen para cubrir todo el contenedor */
+    background-position: center; /* Centra la imagen en el contenedor */
     opacity: 0.5; /* Reducir la opacidad del fondo */
-    z-index: -1; /* Colocar por detrás del contenido del body */
+    z-index: -1; /* Coloca el fondo detrás del contenido del body */
 }
 
 .contenedor {
@@ -24,23 +28,23 @@ body::before {
 
 h2 {
     text-align: center;
-    margin: 0 10px; 
+    margin: 0 0.625rem; 
 }
 .boton {
 display: inline-block; /* Permite que los elementos sean elementos de bloque en línea */
-    padding: 10px 20px; /* Ajusta el espacio interno de los botones */
+    padding: 0.625rem 1.25rem; /* Ajusta el espacio interno de los botones */
     background-color: rgb(44, 229, 161); /* Color de fondo del botón */
     color: black; /* Color del texto del botón */
     text-align: center; /* Centra el texto dentro del botón */
     text-decoration: none; /* Elimina el subrayado del texto (por defecto en algunos navegadores) */
     border: none; /* Elimina el borde del botón */
-    border-radius: 5px; /* Añade esquinas redondeadas al botón */
+    border-radius: 0.313rem; /* Añade esquinas redondeadas al botón */
     cursor: pointer; /* Cambia el cursor a mano cuando se pasa sobre el botón */
-    margin-right: 10px;
+    margin-right: 0.625rem;
 }
 .imagen2 {
-    margin: 20px auto; /* Margen superior e inferior de 20px y centrar horizontalmente */
-    max-width: 300px; /* Ancho máximo de la imagen */
+    margin: 1.25rem auto; /* Margen superior e inferior de 20px y centrar horizontalmente */
+    max-width: 18.75rem; /* Ancho máximo de la imagen */
 }
 .imagen2 img {
     display: block; /* Hacer que la imagen sea un bloque para aplicar márgenes automáticamente */
@@ -49,34 +53,34 @@ display: inline-block; /* Permite que los elementos sean elementos de bloque en 
     margin: 0 auto; /* Centrar la imagen horizontalmente dentro del contenedor */
 }
 h1 {
-    font-size: 55px ;
+    font-size: 3.438rem ;
     color: rgb(44, 229, 161);
     text-align: center;
     text-shadow: 
-    -1px -1px 0 #000,  
-     1px -1px 0 #000,
-    -1px  1px 0 #000,
-     1px  1px 0 #000;
+    -0.063rem -0.063rem 0 #000,  
+     0.063rem -0.063rem 0 #000,
+    -0.063rem  0.063rem 0 #000,
+     0.063rem  0.063rem 0 #000;
 }
 
 p {
-    font-size: 30px;
+    font-size: 1.875rem;
     color: black;
     text-align: center;
 }
 
 .galeria {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Distribuye las imágenes en columnas flexibles */
-    gap: 20px; /* Espacio entre las imágenes */
-    padding: 20px; /* Espacio interior de la galería */
+    grid-template-columns: repeat(auto-fill, minmax(15.625rem, 1fr)); /* Distribuye las imágenes en columnas flexibles */
+    gap: 1.25rem; /* Espacio entre las imágenes */
+    padding: 1.25rem; /* Espacio interior de la galería */
 }
 
 .imagen {
     position: relative; /* Permite posicionar elementos internos relativamente */
     overflow: hidden; /* Oculta contenido que sobresale */
-    border-radius: 5px; /* Borde redondeado */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    border-radius: 0.313rem; /* Borde redondeado */
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); /* Sombra ligera */
 }
 
 .imagen img {
@@ -91,11 +95,11 @@ p {
 }
 
 .contenido {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
+    max-width: 50rem;
+    margin: 1.25rem auto;
+    padding: .25rem;
     background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1);
 }
 
 .formulario-flotante {
@@ -104,39 +108,39 @@ p {
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgba(255, 255, 255, 0.9); /* Fondo semitransparente */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    border-radius: 10px;
+    box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.2);
+    padding: 1.25rem;
+    border-radius: 0.625rem;
     z-index: 1000; /* Asegura que esté por encima del contenido */
-    margin-right: 30px;
-    max-width: 600px;
+    margin-right:  1.875rem;
+    max-width: 37.5rem;
 }
 .formulario {
     margin: 0 auto;
 }
 
 .campo {
-    margin-bottom: 15px;
+    margin-bottom: 0.938rem;
 }
 label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 0.313rem;
 }
 
 input[type="text"],
 input[type="email"],
 textarea {
-    width: calc(100% - 20px);
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    width: calc(100% - 1.25rem);
+    padding: 0.625rem;
+    border: 0.063rem solid #ccc;
+    border-radius: 0.313rem;
 }
 button[type="submit"] {
     background-color: rgb(44, 229, 161);
     color: #fff;
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.313rem;
     cursor: pointer;
 }
 
@@ -146,8 +150,27 @@ button[type="submit"]:hover {
 .formulario h2{
     color:rgb(44, 229, 161) ;
     text-shadow: 
-    -1px -1px 0 #000,  
-     1px -1px 0 #000,
-    -1px  1px 0 #000,
-     1px  1px 0 #000;
+    -0.063rem -0.063rem 0 #000,  
+    0.063rem -0.063rem 0 #000,
+   -0.063rem  0.063rem 0 #000,
+    0.063rem  0.063rem 0 #000;
 }
+
+@media (max-width: 768px) {
+    .contenedor {
+        flex-direction: column; /* Cambia la dirección del flex para apilar los botones verticalmente */
+        align-items: center; /* Centra los botones horizontalmente */
+        gap: 1rem; /* Añade espacio entre los botones */
+    }
+
+    .boton {
+        margin-right: 0; /* Elimina el margen derecho ya que los botones estarán en una sola columna */
+        margin-bottom: 0.5rem; /* Añade un margen inferior para separar los botones */
+    }
+}
+
+@media (max-width: 480px) {
+    .boton {
+        padding: 0.5rem 1rem; /* Ajusta el tamaño del padding para pantallas muy pequeñas */
+        font-size: 0.875rem; /* Reduce el tamaño del texto en los botones */
+    }
